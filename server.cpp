@@ -3,7 +3,13 @@
 #include <string>
 #include <fstream>
 #include <algorithm>
+#include <cctype>
 // 引入第三方单头文件库
+#ifdef _WIN32
+#ifndef _WIN32_WINNT
+#define _WIN32_WINNT 0x0A00
+#endif
+#endif
 #include "httplib.h"
 #include "json.hpp"
 #ifdef _WIN32
